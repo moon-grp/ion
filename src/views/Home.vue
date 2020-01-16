@@ -7,6 +7,7 @@
     </ion-header>
     <div class="ion-padding">
       <zipsearch v-on:get-zip="getZipInfo"/>
+      <display v-bind:info="info"/>
     </div> 
     
   </div>
@@ -16,12 +17,18 @@
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
 import zipsearch from "@/components/zipsearch.vue"
+import display from "@/components/display.vue"
 
 export default {
   name: 'home',
   components: {
-    zipsearch
+    zipsearch, display
   },
+   data() {
+      return {
+        info:null
+      }
+    },
   methods:{
      showAlert() {
       return this.$ionic.alertController
@@ -42,11 +49,7 @@ export default {
         console.log(this.info)
       }
     },
-    data() {
-      return {
-        info:null
-      }
-    },
+   
   }
 }
 </script>

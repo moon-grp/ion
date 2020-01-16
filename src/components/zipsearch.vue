@@ -4,7 +4,7 @@
       <ion-col>
         <ion-item>
           <ion-input
-            placeholder="Enter Us based ZipCode"
+            placeholder="Enter U.S Based ZipCode"
             name="zip"
             :value="zip"
             @input="zip = $event.target.value"
